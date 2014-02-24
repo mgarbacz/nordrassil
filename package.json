@@ -1,0 +1,17 @@
+{
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:mgarbacz/nordrassil.git"
+  },
+  "dependencies": {
+    "javascript-brunch": ">= 1.0 < 1.8",
+    "jshint-brunch": ">= 1.0 < 1.8",
+
+    "css-brunch": ">= 1.0 < 1.8",
+
+    "uglify-js-brunch": ">= 1.0 < 1.8",
+    "clean-css-brunch": ">= 1.0 < 1.8",
+
+    "auto-reload-brunch": ">= 1.0 < 1.8"
+  }
+}
