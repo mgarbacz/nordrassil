@@ -46,6 +46,20 @@ var TrieNode = (function() {
     return strings;
   };
 
+  TrieNode.prototype.find = function(string, index) {
+    var currChar = string[index];
+
+    if (currChar) {
+      if (!this.children[currChar]) {
+        return false;
+      } else {
+        return this.children[currChar].find(string, index + 1);
+      }
+    } else {
+      return this.string || false;
+    }
+  };
+
   return TrieNode;
 })();
 

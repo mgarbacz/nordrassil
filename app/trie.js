@@ -13,6 +13,10 @@ var Trie = (function() {
     return this.root.search(string, 0);
   };
 
+  Trie.prototype.find = function(string) {
+    return this.root.find(string, 0);
+  };
+
   return Trie;
 })();
 
