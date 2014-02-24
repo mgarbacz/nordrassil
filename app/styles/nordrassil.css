@@ -15,6 +15,12 @@ body {
   box-sizing: border-box;
 }
 
+#main {
+  width: 360px;
+  margin: 20px auto;
+  position: relative;
+}
+
 #search-input {
   height: 30px;
   width: 100%;
@@ -48,10 +54,4 @@ body {
 #search-results > li {
   padding: 8px;
   border-bottom: 1px solid #333333;
-}
-
-#main {
-  width: 360px;
-  margin: 20px auto;
-  position: relative;
 }
