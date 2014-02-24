@@ -27,6 +27,8 @@ var TrieNode = (function() {
       } else {
         return this.children[currChar].search(string, index + 1);
       }
+    } else if (index === 0) {
+      return false;
     } else {
       return collectStrings(this);
     }
