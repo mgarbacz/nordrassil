@@ -9,6 +9,10 @@ var Trie = (function() {
     this.root.add(string, 0);
   };
 
+  Trie.prototype.search = function(string) {
+    return this.root.search(string, 0);
+  };
+
   return Trie;
 })();
 
