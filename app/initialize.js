@@ -2,14 +2,22 @@ var Trie = require('trie');
 
 trie = new Trie();
 
-trie.add('bat');
+trie.add('alpha');
 trie.add('bad');
+trie.add('bat');
+trie.add('batman');
+trie.add('car');
+trie.add('cat');
+trie.add('dude');
+trie.add('eclipse');
+trie.add('fang');
+trie.add('hello');
+trie.add('xenophobe');
 
 var searchInput = document.getElementById('search-input');
 var searchResults = document.getElementById('search-results');
 var addButton = document.getElementById('add-button');
 
-addButton.style.display = 'none';
 addButton.disabled = true;
 
 searchInput.oninput = function() {
@@ -28,10 +36,8 @@ searchInput.oninput = function() {
   }
 
   if (exists || !this.value) {
-    addButton.style.display = 'none';
     addButton.disabled = true;
   } else {
-    addButton.style.display = 'inline-block';
     addButton.disabled = false;
   }
 };

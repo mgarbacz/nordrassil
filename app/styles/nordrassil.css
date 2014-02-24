@@ -15,9 +15,16 @@ body {
   box-sizing: border-box;
 }
 
+h5 {
+  text-align: center;
+}
+
 #main {
   width: 360px;
   margin: 20px auto;
+}
+
+#input {
   position: relative;
 }
 
@@ -34,13 +41,18 @@ body {
   right: 0;
   top: 0;
   border: none;
-  border-left: 1px solid #333333;
   color: #333333;
+  border-left: 1px solid #333333;
   background-image: none;
   background-color: inherit;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
+}
+
+#add-button:disabled {
+  color: #eeeeee;
+  border-left: none;
 }
 
 #search-results {
