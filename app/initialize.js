@@ -49,7 +49,6 @@ addButton.onclick = function() {
 
   if (result) {
     searchInput.oninput();
-    alert(result + ' was added!');
   }
 };
 
