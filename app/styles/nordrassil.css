@@ -81,8 +81,6 @@ h5 {
 #search-results > li {
   padding: 8px;
   border: 1px solid #333333;
-}
-
-#search-results > li:last-child {
   border-top: none;
 }
+
