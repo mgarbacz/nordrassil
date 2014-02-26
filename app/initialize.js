@@ -2,17 +2,17 @@ var Trie = require('trie');
 
 trie = new Trie();
 
-trie.add('alpha');
-trie.add('bad');
-trie.add('bat');
-trie.add('batman');
-trie.add('car');
-trie.add('cat');
-trie.add('dude');
-trie.add('eclipse');
-trie.add('fang');
-trie.add('hello');
-trie.add('xenophobe');
+var wordRequestListener = function() {
+  var words = this.responseText.split('\n');
+  for (var word in words) {
+    trie.add(words[word]);
+  }
+};
+
+var wordRequest = new XMLHttpRequest();
+wordRequest.onload = wordRequestListener;
+wordRequest.open('get', 'words.txt', true);
+wordRequest.send();
 
 var searchInput = document.getElementById('search-input');
 var searchResults = document.getElementById('search-results');
