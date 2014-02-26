@@ -23,6 +23,7 @@ h5 {
 #main {
   width: 360px;
   margin: 20px auto;
+  display: none;
 }
 
 #input {

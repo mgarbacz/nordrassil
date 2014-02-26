@@ -4,19 +4,16 @@ trie = new Trie();
 
 /* Request words file */
 
-var percentElement = document.getElementById('loading');
-
 var wordRequest = new XMLHttpRequest();
 wordRequest.addEventListener('load', transferComplete, false);
 wordRequest.addEventListener('progress', updateProgress, false);
 wordRequest.open('get', 'words.txt', true);
-wordRequest.send();
 
+var percentElement = document.getElementById('loading');
 function updateProgress(event) {
   if (event.lengthComputable) {
     var percentComplete = (100 * event.loaded / event.total).toFixed(0) + '%';
     percentElement.innerHTML = percentComplete;
-    console.log(percentComplete);
   }
 }
 
@@ -27,8 +24,12 @@ function transferComplete() {
   }
 
   var spinnerElement = document.getElementById('spinner');
+  var mainElement = document.getElementById('main');
   spinnerElement.parentElement.removeChild(spinnerElement);
+  mainElement.style.display = 'block';
 }
+
+wordRequest.send();
 
 
 /* Read input from user */
