@@ -2,17 +2,35 @@ var Trie = require('trie');
 
 trie = new Trie();
 
-var wordRequestListener = function() {
+/* Request words file */
+
+var percentElement = document.getElementById('loading');
+
+var wordRequest = new XMLHttpRequest();
+wordRequest.addEventListener('load', transferComplete, false);
+wordRequest.addEventListener('progress', updateProgress, false);
+wordRequest.open('get', 'words.txt', true);
+wordRequest.send();
+
+function updateProgress(event) {
+  if (event.lengthComputable) {
+    var percentComplete = (100 * event.loaded / event.total).toFixed(0) + '%';
+    percentElement.innerHTML = percentComplete;
+  }
+}
+
+function transferComplete() {
   var words = this.responseText.split('\n');
   for (var word in words) {
     trie.add(words[word]);
   }
-};
 
-var wordRequest = new XMLHttpRequest();
-wordRequest.onload = wordRequestListener;
-wordRequest.open('get', 'words.txt', true);
-wordRequest.send();
+  var spinnerElement = document.getElementById('spinner');
+  spinnerElement.parentElement.removeChild(spinnerElement);
+}
+
+
+/* Read input from user */
 
 var searchInput = document.getElementById('search-input');
 var searchResults = document.getElementById('search-results');
