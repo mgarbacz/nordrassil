@@ -16,6 +16,7 @@ function updateProgress(event) {
   if (event.lengthComputable) {
     var percentComplete = (100 * event.loaded / event.total).toFixed(0) + '%';
     percentElement.innerHTML = percentComplete;
+    console.log(percentComplete);
   }
 }
 
