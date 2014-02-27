@@ -20,7 +20,7 @@ function updateProgress(event) {
 function transferComplete() {
   var words = this.responseText.split('\n');
   for (var word in words) {
-    trie.add(words[word]);
+    trie.add(words[word].replace(/\r?\n|\r/, ''));
   }
 
   var spinnerElement = document.getElementById('spinner');
