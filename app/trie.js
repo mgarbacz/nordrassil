@@ -6,15 +6,15 @@ var Trie = (function() {
   }
 
   Trie.prototype.add = function(string) {
-    this.root.add(string, 0);
+    this.root.add(string.trim(), 0);
   };
 
   Trie.prototype.search = function(string) {
-    return this.root.search(string, 0);
+    return this.root.search(string.trim(), 0);
   };
 
   Trie.prototype.find = function(string) {
-    return this.root.find(string, 0);
+    return this.root.find(string.trim(), 0);
   };
 
   return Trie;
