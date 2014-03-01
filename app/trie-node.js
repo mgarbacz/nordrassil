@@ -58,7 +58,7 @@ var TrieNode = (function() {
         return this.children[currChar].find(string, index + 1);
       }
     } else {
-      return this.string || false;
+      return this.string ? true : false;
     }
   };
 
