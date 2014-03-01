@@ -1,4 +1,4 @@
-var TrieNode = require('trie-node');
+var TrieNode = require('./trie-node');
 
 var Trie = (function() {
   function Trie() {
