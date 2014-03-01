@@ -3,6 +3,9 @@
     "type": "git",
     "url": "git@github.com:mgarbacz/nordrassil.git"
   },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
   "dependencies": {
     "javascript-brunch": ">= 1.0 < 1.8",
     "jshint-brunch": ">= 1.0 < 1.8",
@@ -13,5 +16,9 @@
     "clean-css-brunch": ">= 1.0 < 1.8",
 
     "auto-reload-brunch": ">= 1.0 < 1.8"
+  },
+  "devDependencies": {
+    "mocha": "1.16.x",
+    "chai": "1.8.x"
   }
 }
