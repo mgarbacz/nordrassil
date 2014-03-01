@@ -11,6 +11,10 @@ describe('Trie', function() {
     expect(trie).to.be.ok;
   });
 
+  it('should have a root', function() {
+    expect(trie.root).to.be.ok;
+  });
+
   it('should have add method', function() {
     expect(trie.add).to.be.an.instanceof(Function);
   });
