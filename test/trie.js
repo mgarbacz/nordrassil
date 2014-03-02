@@ -54,4 +54,11 @@ describe('Trie', function() {
     expect(trie.search('test')).to.not.contain('nottest');
   });
 
+  // search not match return empty array
+  // search one match return one element array
+  // add should ignore case on character -> TrieNode
+  // add should save case on word -> TrieNode
+  // search should ignore case
+  // find should ignore case
+
 });
