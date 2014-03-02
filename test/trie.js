@@ -19,6 +19,10 @@ describe('Trie', function() {
     expect(trie.add).to.be.an.instanceof(Function);
   });
 
+  it('should add string to trie', function() {
+    expect(trie.add('test')).to.be.undefined;
+  });
+
   it('should have search method', function() {
     expect(trie.search).to.be.an.instanceof(Function);
   });
