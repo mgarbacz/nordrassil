@@ -19,10 +19,6 @@ describe('Trie', function() {
     expect(trie.add).to.be.an.instanceof(Function);
   });
 
-  it('should add string to trie', function() {
-    expect(trie.add('test')).to.be.undefined;
-  });
-
   it('should have search method', function() {
     expect(trie.search).to.be.an.instanceof(Function);
   });
@@ -30,4 +26,14 @@ describe('Trie', function() {
   it('should have find method', function() {
     expect(trie.find).to.be.an.instanceof(Function);
   });
+
+  it('should add string to trie', function() {
+    expect(trie.add('test')).to.be.undefined;
+  });
+
+  it('should correctly find an added string', function() {
+    trie.add('test');
+    expect(trie.find('test')).to.be.true;
+  });
+
 });
