@@ -36,4 +36,9 @@ describe('Trie', function() {
     expect(trie.find('test')).to.be.true;
   });
 
+  it('should trim leading/trailing spaces when adding a string', function() {
+    trie.add('  test   ');
+    expect(trie.find('test')).to.be.true;
+  });
+
 });
