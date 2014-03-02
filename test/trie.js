@@ -33,12 +33,25 @@ describe('Trie', function() {
 
   it('should find an added string', function() {
     trie.add('test');
+
     expect(trie.find('test')).to.be.true;
   });
 
   it('should trim leading/trailing spaces when adding a string', function() {
     trie.add('  test   ');
+
     expect(trie.find('test')).to.be.true;
+  });
+
+  it('should search for all matching strings', function() {
+    trie.add('test');
+    trie.add('tester');
+    trie.add('nottest');
+
+    expect(trie.search('test')).to.be.an.instanceof(Array);
+    expect(trie.search('test')).to.contain('test');
+    expect(trie.search('test')).to.contain('tester');
+    expect(trie.search('test')).to.not.contain('nottest');
   });
 
 });
