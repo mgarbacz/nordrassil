@@ -27,11 +27,11 @@ describe('Trie', function() {
     expect(trie.find).to.be.an.instanceof(Function);
   });
 
-  it('should add string to trie', function() {
+  it('should add string without errors', function() {
     expect(trie.add('test')).to.be.undefined;
   });
 
-  it('should correctly find an added string', function() {
+  it('should find an added string', function() {
     trie.add('test');
     expect(trie.find('test')).to.be.true;
   });
