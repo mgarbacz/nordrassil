@@ -48,10 +48,12 @@ describe('Trie', function() {
     trie.add('tester');
     trie.add('nottest');
 
-    expect(trie.search('test')).to.be.an.instanceof(Array);
-    expect(trie.search('test')).to.contain('test');
-    expect(trie.search('test')).to.contain('tester');
-    expect(trie.search('test')).to.not.contain('nottest');
+    var result = trie.search('test');
+
+    expect(result).to.be.an.instanceof(Array);
+    expect(result).to.contain('test');
+    expect(result).to.contain('tester');
+    expect(result).to.not.contain('nottest');
   });
 
   // search not match return empty array
