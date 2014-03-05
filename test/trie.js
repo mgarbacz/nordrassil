@@ -37,6 +37,10 @@ describe('Trie', function() {
     expect(trie.find('test')).to.be.true;
   });
 
+  it('should return false when not found', function() {
+    expect(trie.find('test')).to.be.false;
+  });
+
   it('should trim leading/trailing spaces when adding', function() {
     trie.add('  test   ');
 
