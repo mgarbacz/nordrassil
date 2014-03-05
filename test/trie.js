@@ -27,23 +27,23 @@ describe('Trie', function() {
     expect(trie.find).to.be.an.instanceof(Function);
   });
 
-  it('should add string without errors', function() {
+  it('should add without errors', function() {
     expect(trie.add('test')).to.be.undefined;
   });
 
-  it('should find an added string', function() {
+  it('should return true when found', function() {
     trie.add('test');
 
     expect(trie.find('test')).to.be.true;
   });
 
-  it('should trim leading/trailing spaces when adding a string', function() {
+  it('should trim leading/trailing spaces when adding', function() {
     trie.add('  test   ');
 
     expect(trie.find('test')).to.be.true;
   });
 
-  it('should search for all matching strings', function() {
+  it('should return all matching strings when searching', function() {
     trie.add('test');
     trie.add('tester');
     trie.add('nottest');
