@@ -76,7 +76,6 @@ describe('Trie', function() {
   // search one match return one element array
   // add should ignore case on character -> TrieNode
   // add should save case on word -> TrieNode
-  // search should ignore case
   // find should ignore case
 
 });
