@@ -41,6 +41,14 @@ describe('Trie', function() {
     expect(trie.find('test')).to.be.false;
   });
 
+  it('should consider case when finding', function() {
+    trie.add('TeSt');
+
+    expect(trie.find('test')).to.be.false;
+    expect(trie.find('TEST')).to.be.false;
+    expect(trie.find('TeSt')).to.be.true;
+  });
+
   it('should trim leading/trailing spaces when adding', function() {
     trie.add('  test   ');
 
@@ -76,6 +84,5 @@ describe('Trie', function() {
   // search one match return one element array
   // add should ignore case on character -> TrieNode
   // add should save case on word -> TrieNode
-  // find should ignore case
 
 });
