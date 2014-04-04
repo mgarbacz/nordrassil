@@ -27,14 +27,12 @@ describe('Trie', function() {
     expect(trie.find).to.be.an.instanceof(Function);
   });
 
-  it('should add without errors', function() {
-    expect(trie.add('test')).to.be.undefined;
+  it('should return itself when adding', function() {
+    expect(trie.add('test')).to.equal(trie);
   });
 
   it('should return true when found', function() {
-    trie.add('test');
-
-    expect(trie.find('test')).to.be.true;
+    expect(trie.add('test').find('test')).to.be.true;
   });
 
   it('should return false when not found', function() {

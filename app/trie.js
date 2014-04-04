@@ -7,6 +7,7 @@ var Trie = (function() {
 
   Trie.prototype.add = function(string) {
     this.root.add(string.trim(), 0);
+    return this;
   };
 
   Trie.prototype.search = function(string) {
