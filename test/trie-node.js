@@ -11,4 +11,10 @@ describe('TrieNode', function() {
     expect(trienode).to.be.ok;
   });
 
+  it('should set a character', function() {
+    trienode = new TrieNode('t');
+
+    expect(trienode.character).to.equal('t');
+  });
+
 });
