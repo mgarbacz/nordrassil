@@ -17,4 +17,16 @@ describe('TrieNode', function() {
     expect(trienode.character).to.equal('t');
   });
 
+  it('should have add method', function() {
+    expect(trienode.add).to.be.an.instanceof(Function);
+  });
+
+  it('should have search method', function() {
+    expect(trienode.add).to.be.an.instanceof(Function);
+  });
+
+  it('should have find method', function() {
+    expect(trienode.add).to.be.an.instanceof(Function);
+  });
+
 });
