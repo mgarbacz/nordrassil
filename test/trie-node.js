@@ -29,4 +29,8 @@ describe('TrieNode', function() {
     expect(trienode.add).to.be.an.instanceof(Function);
   });
 
+  it('should return undefined when adding', function() {
+    expect(trienode.add('test')).to.be.undefined;
+  });
+
 });
