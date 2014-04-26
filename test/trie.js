@@ -87,8 +87,6 @@ describe('Trie', function() {
     expect(result).to.contain('TeSt MiXeD');
   });
 
-  // search not match return empty array
-  // search one match return one element array
   // add should ignore case on character -> TrieNode
   // add should save case on word -> TrieNode
 
