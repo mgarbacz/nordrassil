@@ -23,12 +23,12 @@ var TrieNode = (function() {
 
     if (currChar) {
       if (!this.children[currChar]) {
-        return false;
+        return [];
       } else {
         return this.children[currChar].search(string, index + 1);
       }
     } else if (index === 0) {
-      return false;
+      return [];
     } else {
       return collectStrings(this);
     }
