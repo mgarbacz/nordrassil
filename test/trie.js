@@ -48,9 +48,19 @@ describe('Trie', function() {
   });
 
   it('should trim leading/trailing spaces when adding', function() {
-    trie.add('  test   ');
+    expect(trie.add('  test   ').find('test')).to.be.true;
+  });
 
-    expect(trie.find('test')).to.be.true;
+  it('should return an array when searching', function() {
+    expect(trie.search('test')).to.be.an.instanceof(Array);
+  });
+
+  it('should return an empty array when searching with no match', function() {
+    expect(trie.search('test')).to.be.empty;
+  });
+
+  it('should return a single element array when searching with one match', function() {
+    expect(trie.add('test').search('test')).to.have.length(1);
   });
 
   it('should return all matching strings when searching', function() {
@@ -60,7 +70,6 @@ describe('Trie', function() {
 
     var result = trie.search('test');
 
-    expect(result).to.be.an.instanceof(Array);
     expect(result).to.contain('test');
     expect(result).to.contain('tester');
     expect(result).to.not.contain('nottest');
