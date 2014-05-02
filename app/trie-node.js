@@ -2,19 +2,20 @@ var TrieNode = (function() {
   function TrieNode(character) {
     this.character = character || '';
     this.children = {};
-    this.string = '';
+    this.strings = [];
   }
 
   TrieNode.prototype.add = function(string, index) {
     var currChar = string[index];
 
     if (currChar) {
+      currChar = currChar.toLowerCase();
       if (!this.children[currChar]) {
         this.children[currChar] = new TrieNode(currChar);
       }
       this.children[currChar].add(string, index + 1);
     } else {
-      this.string = string;
+      this.strings.push(string);
     }
   };
 
@@ -22,6 +23,7 @@ var TrieNode = (function() {
     var currChar = string[index];
 
     if (currChar) {
+      currChar = currChar.toLowerCase();
       if (!this.children[currChar]) {
         return [];
       } else {
@@ -37,8 +39,8 @@ var TrieNode = (function() {
   var collectStrings = function(node) {
     var strings = [];
 
-    if (node.string) {
-      strings.push(node.string);
+    if (node.strings) {
+      strings = strings.concat(node.strings);
     }
 
     for (var child in node.children) {
@@ -52,13 +54,14 @@ var TrieNode = (function() {
     var currChar = string[index];
 
     if (currChar) {
+      currChar = currChar.toLowerCase();
       if (!this.children[currChar]) {
         return false;
       } else {
         return this.children[currChar].find(string, index + 1);
       }
     } else {
-      return this.string ? true : false;
+      return this.strings.indexOf(string) > -1 ? true : false;
     }
   };
 
