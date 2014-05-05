@@ -11,10 +11,14 @@ describe('TrieNode', function() {
     expect(trienode).to.be.ok;
   });
 
-  it('should set a character', function() {
+  it('should set a character on construction', function() {
     trienode = new TrieNode('t');
 
     expect(trienode.character).to.equal('t');
+  });
+
+  it('should store a string array', function() {
+    expect(trienode.strings).to.be.an.instanceof(Array);
   });
 
   it('should have add method', function() {
@@ -30,7 +34,17 @@ describe('TrieNode', function() {
   });
 
   it('should return undefined when adding', function() {
-    expect(trienode.add('test')).to.be.undefined;
+    expect(trienode.add('test', 0)).to.be.undefined;
+  });
+
+  it('should store next case insensitive character when adding', function() {
+    trienode.add('tEsT', 3);
+    expect(trienode.children['t']).to.be.ok;
+  });
+
+  it('should store case sensitive string when adding', function() {
+    trienode.add('tEsT', 3);
+    expect(trienode.children['t'].strings).to.contain('tEsT');
   });
 
 });
