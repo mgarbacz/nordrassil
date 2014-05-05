@@ -87,7 +87,4 @@ describe('Trie', function() {
     expect(result).to.contain('TeSt MiXeD');
   });
 
-  // add should ignore case on character -> TrieNode
-  // add should save case on word -> TrieNode
-
 });
