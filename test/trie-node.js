@@ -21,30 +21,35 @@ describe('TrieNode', function() {
     expect(trienode.strings).to.be.an.instanceof(Array);
   });
 
-  it('should have add method', function() {
-    expect(trienode.add).to.be.an.instanceof(Function);
+  describe('add method', function() {
+    it('should be a function', function() {
+      expect(trienode.add).to.be.an.instanceof(Function);
+    });
+
+    it('should return undefined', function() {
+      expect(trienode.add('test', 0)).to.be.undefined;
+    });
+
+    it('should store next case insensitive character', function() {
+      trienode.add('tEsT', 3);
+      expect(trienode.children['t']).to.be.ok;
+    });
+
+    it('should store case sensitive string', function() {
+      trienode.add('tEsT', 3);
+      expect(trienode.children['t'].strings).to.contain('tEsT');
+    });
   });
 
-  it('should have search method', function() {
-    expect(trienode.add).to.be.an.instanceof(Function);
+  describe('search method', function() {
+    it('should be a function', function() {
+      expect(trienode.search).to.be.an.instanceof(Function);
+    });
   });
 
-  it('should have find method', function() {
-    expect(trienode.add).to.be.an.instanceof(Function);
+  describe('find method', function() {
+    it('should be a function', function() {
+      expect(trienode.find).to.be.an.instanceof(Function);
+    });
   });
-
-  it('should return undefined when adding', function() {
-    expect(trienode.add('test', 0)).to.be.undefined;
-  });
-
-  it('should store next case insensitive character when adding', function() {
-    trienode.add('tEsT', 3);
-    expect(trienode.children['t']).to.be.ok;
-  });
-
-  it('should store case sensitive string when adding', function() {
-    trienode.add('tEsT', 3);
-    expect(trienode.children['t'].strings).to.contain('tEsT');
-  });
-
 });
