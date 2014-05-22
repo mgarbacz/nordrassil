@@ -17,7 +17,7 @@ describe('TrieNode', function() {
     expect(trienode.character).to.equal('t');
   });
 
-  it('should store a string array', function() {
+  it('should store an array of strings', function() {
     expect(trienode.strings).to.be.an.instanceof(Array);
   });
 
@@ -44,6 +44,10 @@ describe('TrieNode', function() {
   describe('search method', function() {
     it('should be a function', function() {
       expect(trienode.search).to.be.an.instanceof(Function);
+    });
+
+    it('should return an array', function() {
+      expect(trienode.search('test')).to.be.an.instanceof(Array);
     });
   });
 
