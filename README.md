@@ -1,7 +1,8 @@
 # nordrassil [![Build Status](https://travis-ci.org/mgarbacz/nordrassil.svg?branch=master)](https://travis-ci.org/mgarbacz/nordrassil)
 
-##### Demo:
-[Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
+> A Word Trie implemented in vanilla JavaScript
+
+Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
 ##### Run locally:
 This app uses the [Brunch](http://brunch.io) build tool. Install it
