@@ -4,7 +4,7 @@
 
 Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
-## Run locally:
+## Build locally:
 
 Install dependencies with
 
@@ -19,21 +19,25 @@ To initiate a build:
 To initiate a production build (minifies JavaScript and CSS):
 
     npm run build-prod
+    
+## Development:
 
-Brunch can also watch the `app` directory for file changes, and initiate builds on the fly.
+Brunch can also watch the `app` directory for file changes, and initiate builds on the fly. This is the best way to develop, as it will concat all the files, run the JavaScript code in `app` through JSHint, and auto reload the browser tab you are viewing from.
 
-To initiate a watch:
+To initiate a watch and serve the resulting content using your preffered web server:
 
     npm run watch
 
-To initiate a watch and have Brunch serve the resulting content on port 3333:
+To initiate a watch and have Brunch serve the resulting content on `http://localhost:3333`:
 
     npm run serve
 
-If you are going to be doing any development on the app, that last command would be what you want to use.
-
-## Running tests:
+## Run test cases:
 
     npm test
 
 This will run the tests in `test` using [Mocha](http://visionmedia.github.io/mocha/). It will report code coverage via [Istanbul](http://gotwarlost.github.io/istanbul/) as well.
+
+## License
+
+See [LICENSE](LICENSE) file included in this distribution.
