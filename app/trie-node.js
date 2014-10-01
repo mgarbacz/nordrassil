@@ -37,11 +37,7 @@ var TrieNode = (function() {
     };
 
     var collectStrings = function(node) {
-        var strings = [];
-
-        if (node.strings) {
-            strings = strings.concat(node.strings);
-        }
+        var strings = node.strings.slice();
 
         for (var child in node.children) {
             strings = strings.concat(collectStrings(node.children[child]));
