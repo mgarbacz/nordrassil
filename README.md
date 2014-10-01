@@ -5,24 +5,35 @@
 Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
 ##### Run locally:
-This app uses the [Brunch](http://brunch.io) build tool. Install it
-globally via [npm](https://www.npmjs.org/):
 
-    npm install -g brunch
-
-Then install the other dependencies with
+Install dependencies with
 
     npm install
 
-Then build the project from it's dev-friendly structure in the `app`
-directory to a user-optimized structure via:
+This app uses the [Brunch](http://brunch.io) build tool. The source resides inside the `app` directory and is built by Brunch into the `public` directory. You can serve the content in `public` using your preferred web server.
 
-    brunch b              // regular build
+To initiate a build:
 
-or
+    npm run build
 
-    brunch b -P           // production build (runs through minification)
+To initiate a production build (minifies JavaScript and CSS):
 
-This will put the app into the `public` directory, which you can then serve
-out of your preferred web server.
+    npm run build-prod
 
+Brunch can also watch the `app` directory for file changes, and initiate builds on the fly.
+
+To initiate a watch:
+
+    npm run watch
+
+To initiate a watch and have Brunch serve the resulting content on port 3333:
+
+    npm run serve
+
+If you are going to be doing any development on the app, that last command would be what you want to use.
+
+## Running tests:
+
+    npm test
+
+This will run the tests in `test` using [Mocha](http://visionmedia.github.io/mocha/). It will report code coverage via [Istanbul](http://gotwarlost.github.io/istanbul/) as well.
