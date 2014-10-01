@@ -1,6 +1,6 @@
 # nordrassil [![Build Status](https://travis-ci.org/mgarbacz/nordrassil.svg?branch=master)](https://travis-ci.org/mgarbacz/nordrassil) [![Coverage Status](https://img.shields.io/coveralls/mgarbacz/nordrassil.svg)](https://coveralls.io/r/mgarbacz/nordrassil)
 
-> Nordrassil, the Word Trie - a Word Trie implemented in vanilla JavaScript
+> Nordrassil, the Word Trie - a trie data structure implemented in vanilla JavaScript
 
 Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
