@@ -1,10 +1,10 @@
-# nordrassil [![Build Status](https://travis-ci.org/mgarbacz/nordrassil.svg?branch=master)](https://travis-ci.org/mgarbacz/nordrassil)
+# nordrassil [![Build Status](https://travis-ci.org/mgarbacz/nordrassil.svg?branch=master)](https://travis-ci.org/mgarbacz/nordrassil) [![Coverage Status](https://img.shields.io/coveralls/mgarbacz/nordrassil.svg)](https://coveralls.io/r/mgarbacz/nordrassil)
 
 > A Word Trie implemented in vanilla JavaScript
 
 Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
-##### Run locally:
+## Run locally:
 
 Install dependencies with
 
