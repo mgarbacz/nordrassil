@@ -1,4 +1,6 @@
 {
+  "name": "nordrassil",
+  "description": "Nordrassil, the Word Trie - a trie data structure implemented in vanilla JavaScript",
   "repository": {
     "type": "git",
     "url": "git@github.com:mgarbacz/nordrassil.git"
