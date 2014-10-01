@@ -9,3 +9,6 @@ public
 
 # npm packages
 node_modules
+
+# istanbul coverage
+coverage
