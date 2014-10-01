@@ -4,9 +4,15 @@
     "url": "git@github.com:mgarbacz/nordrassil.git"
   },
   "scripts": {
+    "b": "./node_modules/.bin/brunch build",
+    "bp": "./node_modules/.bin/brunch build --production",
+    "w": "./node_modules/.bin/brunch watch",
+    "ws": "./node_modules/.bin/brunch watch --server",
     "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
   },
   "dependencies": {
+    "brunch": "1.7.x",
+
     "javascript-brunch": ">= 1.0 < 1.8",
     "jshint-brunch": ">= 1.0 < 1.8",
 
