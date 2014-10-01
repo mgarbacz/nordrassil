@@ -1,5 +1,4 @@
-nordrassil
-==========
+# nordrassil [![Build Status](https://travis-ci.org/mgarbacz/nordrassil.svg?branch=master)](https://travis-ci.org/mgarbacz/nordrassil)
 
 ##### Demo:
 [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
@@ -9,7 +8,7 @@ This app uses the [Brunch](http://brunch.io) build tool. Install it
 globally via [npm](https://www.npmjs.org/):
 
     npm install -g brunch
-    
+
 Then install the other dependencies with
 
     npm install
