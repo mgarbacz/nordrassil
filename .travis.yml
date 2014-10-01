@@ -4,5 +4,5 @@ node_js:
   - "0.10"
 notifications:
   email: false
-script:
+after_success:
   "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
