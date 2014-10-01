@@ -42,6 +42,10 @@ describe('Trie', function() {
             expect(trie.search('test')).to.be.empty;
         });
 
+        it('should return an empty array when given no search term', function() {
+            expect(trie.search('')).to.be.empty;
+        });
+
         it('should return a single element array when there is one match', function() {
             expect(trie.add('test').search('test')).to.have.length(1);
         });
