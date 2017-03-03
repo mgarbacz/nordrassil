@@ -36,7 +36,7 @@ To initiate a watch and have Brunch serve the resulting content on `http://local
 
     npm test
 
-This will run the tests in `test` using [Mocha](http://visionmedia.github.io/mocha/). It will report code coverage via [Istanbul](http://gotwarlost.github.io/istanbul/) as well.
+This will run the tests in `test` using [Mocha](http://mochajs.org/). It will report code coverage via [Istanbul](http://gotwarlost.github.io/istanbul/) as well.
 
 ## License
 
