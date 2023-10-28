@@ -10,27 +10,27 @@ Install dependencies with
 
     npm install
 
-This app uses the [Brunch](http://brunch.io) build tool. The source resides inside the `app` directory and is built by Brunch into the `public` directory. You can serve the content in `public` using your preferred web server.
+This app uses the [Vite](https://vitejs.dev/) build tool. The source resides inside the `app` directory and is built by Vite into the `dist` directory. You can serve the content in `dist` using your preferred web server.
 
 To initiate a build:
 
     npm run build
 
-To initiate a production build (minifies JavaScript and CSS):
-
-    npm run build-prod
-    
 ## Development:
 
-Brunch can also watch the `app` directory for file changes, and initiate builds on the fly. This is the best way to develop, as it will concat all the files, run the JavaScript code in `app` through JSHint, and auto reload the browser tab you are viewing from.
+Vite can also watch the `app` directory for file changes, and serve the content without needing to run a full build. This is the best way to develop, as it will auto reload the browser tab you are viewing from.
 
-To initiate a watch and serve the resulting content using your preffered web server:
+To initiate dev mode and serve the content on `http://localhost:5173`
 
-    npm run watch
+    npm run dev
 
-To initiate a watch and have Brunch serve the resulting content on `http://localhost:3333`:
+Alternatively, to have Vite watch for changes and serve the complete production build on `http://localhost:4173`:
 
     npm run serve
+
+Or, to do the same watching for changes and production build but serve from your preferred web server::
+
+    npm run watch
 
 ## Run test cases:
 
