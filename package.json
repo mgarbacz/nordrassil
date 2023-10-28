@@ -6,17 +6,18 @@
     "url": "git@github.com:mgarbacz/nordrassil.git"
   },
   "scripts": {
-    "build": "./node_modules/.bin/brunch build",
-    "build-prod": "./node_modules/.bin/brunch build --production",
-    "watch": "./node_modules/.bin/brunch watch",
-    "serve": "./node_modules/.bin/brunch watch --server",
+    "dev": "./node_modules/.bin/vite app"
+    "build": "./node_modules/.bin/vite build --outDir ./../dist app",
+    "watch": "../node_modules/.bin/vite build --outDir ./../dist --watch app",
+    "serve": "./node_modules/.bin/vite preview --outDir ./../dist app",
     "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
   },
   "devDependencies": {
-    "mocha": "1.16.x",
     "chai": "1.8.x",
-    "istanbul": "0.3.x",
     "coveralls": "^2.11.2",
-    "mocha-lcov-reporter": "0.0.1"
+    "istanbul": "0.3.x",
+    "mocha": "1.16.x",
+    "mocha-lcov-reporter": "0.0.1",
+    "vite": "^4.5.0"
   }
 }
