@@ -11,9 +11,11 @@
     "build": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir app",
     "watch": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir --watch app",
     "serve": "./node_modules/.bin/vite preview --outDir ./../dist --emptyOutDir app",
-    "test": "./node_modules/.bin/_mocha"
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "./node_modules/.bin/c8 ./node_modules/.bin/mocha"
   },
   "devDependencies": {
+    "c8": "^8.0.1",
     "chai": "^4.3.10",
     "mocha": "^10.2.0",
     "mocha-lcov-reporter": "^1.3.0",
