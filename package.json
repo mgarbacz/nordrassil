@@ -13,11 +13,9 @@
     "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
   },
   "devDependencies": {
-    "chai": "1.8.x",
-    "coveralls": "^2.11.2",
-    "istanbul": "0.3.x",
-    "mocha": "1.16.x",
-    "mocha-lcov-reporter": "0.0.1",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
     "vite": "^4.5.0"
   }
 }
