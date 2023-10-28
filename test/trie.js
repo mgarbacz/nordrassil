@@ -1,4 +1,4 @@
-var Trie = require('../app/trie');
+import Trie from '../app/trie.js';
 
 describe('Trie', function() {
     var trie;

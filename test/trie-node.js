@@ -1,4 +1,4 @@
-var TrieNode = require('../app/trie-node');
+import TrieNode from '../app/trie-node.js';
 
 describe('TrieNode', function() {
     var trienode;
