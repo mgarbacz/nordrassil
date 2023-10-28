@@ -7,9 +7,9 @@
   },
   "scripts": {
     "dev": "./node_modules/.bin/vite app",
-    "build": "./node_modules/.bin/vite build --outDir ./../dist app",
-    "watch": "./node_modules/.bin/vite build --outDir ./../dist --watch app",
-    "serve": "./node_modules/.bin/vite preview --outDir ./../dist app",
+    "build": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir app",
+    "watch": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir --watch app",
+    "serve": "./node_modules/.bin/vite preview --outDir ./../dist --emptyOutDir app",
     "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
   },
   "devDependencies": {
