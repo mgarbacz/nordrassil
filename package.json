@@ -12,22 +12,9 @@
     "serve": "./node_modules/.bin/brunch watch --server",
     "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
   },
-  "dependencies": {
-    "brunch": "1.7.x",
-
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "jshint-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
-
-    "css-brunch": ">= 1.0 < 1.8",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-
-    "auto-reload-brunch": ">= 1.0 < 1.8"
-  },
   "devDependencies": {
     "mocha": "1.16.x",
     "chai": "1.8.x",
-
     "istanbul": "0.3.x",
     "coveralls": "^2.11.2",
     "mocha-lcov-reporter": "0.0.1"
