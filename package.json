@@ -1,6 +1,7 @@
 {
   "name": "nordrassil",
   "description": "Nordrassil, the Word Trie - a trie data structure implemented in vanilla JavaScript",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:mgarbacz/nordrassil.git"
@@ -10,7 +11,7 @@
     "build": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir app",
     "watch": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir --watch app",
     "serve": "./node_modules/.bin/vite preview --outDir ./../dist --emptyOutDir app",
-    "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
+    "test": "./node_modules/.bin/_mocha"
   },
   "devDependencies": {
     "chai": "^4.3.10",
