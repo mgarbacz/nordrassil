@@ -24,7 +24,7 @@ To initiate dev mode and serve the content on `http://localhost:5173`:
 
     npm run dev
 
-Alternatively, to have Vite watch for changes and serve the complete production build on `http://localhost:4173`:
+Or, to have Vite watch for changes and serve the complete production build on `http://localhost:4173`:
 
     npm run serve
 
