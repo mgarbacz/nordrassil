@@ -1,4 +1,4 @@
-# nordrassil ![Build Status](https://github.com/mgarbacz/nordrassil/actions/workflows/node.js.yml/badge.svg)[![Coverage Status](https://img.shields.io/coveralls/mgarbacz/nordrassil.svg)](https://coveralls.io/r/mgarbacz/nordrassil)
+# nordrassil [![Build & Test](https://github.com/mgarbacz/nordrassil/actions/workflows/node.js.yml/badge.svg)](https://github.com/mgarbacz/nordrassil/actions/workflows/node.js.yml)[![Coverage Status](https://img.shields.io/coveralls/mgarbacz/nordrassil.svg)](https://coveralls.io/r/mgarbacz/nordrassil)
 
 > Nordrassil, the Word Trie - a trie data structure implemented in vanilla JavaScript
 
