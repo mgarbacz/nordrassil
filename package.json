@@ -1,35 +1,24 @@
 {
   "name": "nordrassil",
   "description": "Nordrassil, the Word Trie - a trie data structure implemented in vanilla JavaScript",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:mgarbacz/nordrassil.git"
   },
   "scripts": {
-    "build": "./node_modules/.bin/brunch build",
-    "build-prod": "./node_modules/.bin/brunch build --production",
-    "watch": "./node_modules/.bin/brunch watch",
-    "serve": "./node_modules/.bin/brunch watch --server",
-    "test": "./node_modules/.bin/istanbul cover --coverage ./node_modules/.bin/_mocha"
-  },
-  "dependencies": {
-    "brunch": "1.7.x",
-
-    "javascript-brunch": ">= 1.0 < 1.8",
-    "jshint-brunch": ">= 1.0 < 1.8",
-    "uglify-js-brunch": ">= 1.0 < 1.8",
-
-    "css-brunch": ">= 1.0 < 1.8",
-    "clean-css-brunch": ">= 1.0 < 1.8",
-
-    "auto-reload-brunch": ">= 1.0 < 1.8"
+    "dev": "./node_modules/.bin/vite app",
+    "build": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir app",
+    "watch": "./node_modules/.bin/vite build --outDir ./../dist --emptyOutDir --watch app",
+    "serve": "./node_modules/.bin/vite preview --outDir ./../dist --emptyOutDir app",
+    "test": "./node_modules/.bin/mocha",
+    "coverage": "./node_modules/.bin/c8 ./node_modules/.bin/mocha"
   },
   "devDependencies": {
-    "mocha": "1.16.x",
-    "chai": "1.8.x",
-
-    "istanbul": "0.3.x",
-    "coveralls": "^2.11.2",
-    "mocha-lcov-reporter": "0.0.1"
+    "c8": "^8.0.1",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0",
+    "mocha-lcov-reporter": "^1.3.0",
+    "vite": "^4.5.0"
   }
 }

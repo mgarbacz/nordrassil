@@ -4,39 +4,45 @@
 
 Demo: [Nordrassil, the Word Trie](http://mgarbacz.github.io/nordrassil/)
 
-## Build locally:
+## Build locally
 
-Install dependencies with
+Install dependencies with:
 
     npm install
 
-This app uses the [Brunch](http://brunch.io) build tool. The source resides inside the `app` directory and is built by Brunch into the `public` directory. You can serve the content in `public` using your preferred web server.
+This app uses the [Vite](https://vitejs.dev/) build tool with a non-default config. The source resides inside the `app` directory and is built by Vite into the `dist` directory. You can serve the content in `dist` using your preferred web server.
 
 To initiate a build:
 
     npm run build
 
-To initiate a production build (minifies JavaScript and CSS):
+## Development
 
-    npm run build-prod
-    
-## Development:
+Vite can also watch the `app` directory for file changes, and serve the content without needing to run a build. This is the best way to develop, as it will not require source maps and will auto reload the browser tab you are viewing from.
 
-Brunch can also watch the `app` directory for file changes, and initiate builds on the fly. This is the best way to develop, as it will concat all the files, run the JavaScript code in `app` through JSHint, and auto reload the browser tab you are viewing from.
+To initiate dev mode and serve the content on `http://localhost:5173`:
 
-To initiate a watch and serve the resulting content using your preffered web server:
+    npm run dev
 
-    npm run watch
-
-To initiate a watch and have Brunch serve the resulting content on `http://localhost:3333`:
+Alternatively, to have Vite watch for changes and serve the complete production build on `http://localhost:4173`:
 
     npm run serve
 
-## Run test cases:
+Or, to do the same watching for changes and the production build, but serve `dist` from your preferred web server instead:
+
+    npm run watch
+
+## Test suite
+
+Run test cases with:
 
     npm test
 
-This will run the tests in `test` using [Mocha](http://mochajs.org/). It will report code coverage via [Istanbul](http://gotwarlost.github.io/istanbul/) as well.
+This will run the tests in `test` using [Mocha](http://mochajs.org/). Code coverage reports are also set up with [c8](https://github.com/bcoe/c8).
+
+To get a code coverage report with the tests:
+
+    npm run coverage
 
 ## License
 
